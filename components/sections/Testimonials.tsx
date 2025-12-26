@@ -2,35 +2,37 @@
 const testimonials = [
   {
     id: 1,
-    name: 'Sarah Johnson',
-    location: 'Mumbai',
-    text: 'Payaana made our dream trip come true! The attention to detail and personalized service was exceptional.',
+    name: "Sarah Johnson",
+    location: "Mumbai",
+    text: "Payaana made our dream trip come true! The attention to detail and personalized service was exceptional.",
     rating: 5,
   },
   {
     id: 2,
-    name: 'Rajesh Kumar',
-    location: 'Delhi',
-    text: 'Amazing experience from start to finish. Highly recommend Payaana for your next adventure!',
+    name: "Rajesh Kumar",
+    location: "Delhi",
+    text: "Amazing experience from start to finish. Highly recommend Payaana for your next adventure!",
     rating: 5,
   },
   {
     id: 3,
-    name: 'Priya Sharma',
-    location: 'Bangalore',
-    text: 'The best travel experience we\'ve ever had. Everything was perfectly organized and the destinations were breathtaking.',
+    name: "Priya Sharma",
+    location: "Bangalore",
+    text: "The best travel experience we&apos;ve ever had. Everything was perfectly organized and the destinations were breathtaking.",
     rating: 5,
   },
-]
+];
 
 export default function Testimonials() {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">What Our Travelers Say</h2>
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">
+            What Our Travelers Say
+          </h2>
           <p className="text-gray-600 text-lg">
-            Don't just take our word for it - hear from our happy travelers
+            Don&apos;t just take our word for it - hear from our happy travelers
           </p>
         </div>
 
@@ -52,9 +54,15 @@ export default function Testimonials() {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
+
+              <p className="text-gray-700 mb-4 italic">
+                &quot;{testimonial.text}&quot;
+              </p>
+
               <div>
-                <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                <p className="font-semibold text-gray-900">
+                  {testimonial.name}
+                </p>
                 <p className="text-sm text-gray-600">{testimonial.location}</p>
               </div>
             </div>
@@ -62,6 +70,5 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
