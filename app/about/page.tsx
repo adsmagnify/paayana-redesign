@@ -363,7 +363,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-payaana-pink via-rose-500 to-pink-600 relative overflow-hidden">
+      <section className="pt-24 pb-20 bg-gradient-to-br from-payaana-pink via-rose-500 to-pink-600 relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />

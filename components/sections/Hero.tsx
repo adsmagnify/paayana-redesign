@@ -24,7 +24,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[85vh] flex flex-col">
+    <section className="relative min-h-screen flex flex-col">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
