@@ -3,22 +3,22 @@ import Image from "next/image";
 export default function WhyPayaana() {
   const features = [
     {
-      image: "/packages.png",
+      image: "/personalized-packages.png",
       title: "Personalized Packages",
       description: "Tailored travel experiences designed just for you",
     },
     {
-      image: "/services.png",
+      image: "/services-doorstep.png",
       title: "Services at Your Doorstep",
       description: "Easy booking and reliable support, anytime, anywhere",
     },
     {
-      image: "/prices.png",
+      image: "/pocketfriendly-prices.png",
       title: "Pocket-Friendly Prices",
       description: "Affordable travel packages without compromising quality",
     },
     {
-      image: null, // Placeholder for Super Fast Service
+      image: "/superfast-service.png", // Placeholder for Super Fast Service
       title: "Super Fast Service",
       description: "Quick bookings and instant confirmations",
     },
@@ -43,9 +43,9 @@ export default function WhyPayaana() {
             <div key={index} className="group relative flex">
               <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 w-full flex flex-col">
                 {/* Icon/Image Container */}
-                <div className="relative w-28 h-24 mx-auto mb-6 flex items-center justify-center flex-shrink-0">
+                <div className="relative w-28 h-24 mx-auto mb-6 flex items-center justify-center flex-shrink-0 bg-transparent">
                   {feature.image ? (
-                    <div className="relative w-full h-full">
+                    <div className="relative w-full h-full bg-transparent">
                       <Image
                         src={feature.image}
                         alt={feature.title}

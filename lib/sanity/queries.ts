@@ -108,3 +108,48 @@ export async function getDestinationBySlug(slug: string) {
   }
 }
 
+export async function getServices() {
+  try {
+    const services = await client.fetch(`
+      *[_type == "service"] | order(order asc, title asc) {
+        _id,
+        title,
+        slug,
+        shortDescription,
+        fullDescription,
+        icon,
+        colorGradient,
+        category
+      }
+    `)
+    return services || []
+  } catch (error) {
+    console.error('Error fetching services:', error)
+    return []
+  }
+}
+
+export async function getServiceBySlug(slug: string) {
+  try {
+    const service = await client.fetch(
+      `
+      *[_type == "service" && slug.current == $slug][0] {
+        _id,
+        title,
+        slug,
+        shortDescription,
+        fullDescription,
+        icon,
+        colorGradient,
+        category
+      }
+    `,
+      { slug }
+    )
+    return service || null
+  } catch (error) {
+    console.error('Error fetching service:', error)
+    return null
+  }
+}
+
