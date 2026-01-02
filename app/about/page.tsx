@@ -10,28 +10,28 @@ export default function AboutPage() {
       title: "International Bookings",
       description:
         "Specialized expertise in worldwide travel destinations with the lowest airfares and exclusive deals",
-      icon: "✈️",
+      icon: "/international-bookings.webp",
       color: "from-blue-400 to-indigo-500",
     },
     {
       title: "Hotel Discounts",
       description:
         "Exclusive discounts on hotel bookings across the globe for comfortable stays",
-      icon: "🏨",
+      icon: "/hotel-discounts.webp",
       color: "from-orange-400 to-red-500",
     },
     {
       title: "Visa & Passport",
       description:
         "Complete guidance on passport issuance, renewal and all kinds of visa procedures",
-      icon: "📄",
+      icon: "/visa-passport.webp",
       color: "from-green-400 to-teal-500",
     },
     {
       title: "Handcrafted Experiences",
       description:
         "Personalized sightseeing itineraries tailored to your unique preferences",
-      icon: "✨",
+      icon: "/handcrafted-experiences.webp",
       color: "from-pink-400 to-rose-500",
     },
   ];
@@ -102,11 +102,11 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
                 <Image
-                  src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=600&h=700&fit=crop"
-                  alt="Travel memories"
-                  width={600}
-                  height={700}
-                  className="object-cover"
+                  src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&h=1000&fit=crop&q=80&auto=format"
+                  alt="Your journey begins - gray paved road under white sky"
+                  width={800}
+                  height={1000}
+                  className="object-cover w-full h-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
@@ -203,10 +203,19 @@ export default function AboutPage() {
                   />
 
                   {/* Icon */}
-                  <div
-                    className={`w-20 h-20 mx-auto bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}
-                  >
-                    {service.icon}
+                  <div className="mx-auto mb-1 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                    {service.icon.startsWith("/") ? (
+                      <div className="relative w-40 h-40 mx-auto">
+                        <Image
+                          src={service.icon}
+                          alt={service.title}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <span className="text-6xl block">{service.icon}</span>
+                    )}
                   </div>
 
                   <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-payaana-pink transition-colors">
@@ -215,9 +224,6 @@ export default function AboutPage() {
                   <p className="text-gray-600 leading-relaxed">
                     {service.description}
                   </p>
-
-                  {/* Decorative corner */}
-                  <div className="absolute bottom-0 right-0 w-24 h-24 bg-gray-50 rounded-tl-full opacity-50 group-hover:opacity-100 transition-opacity" />
                 </div>
               </div>
             ))}

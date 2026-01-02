@@ -43,7 +43,7 @@ export default function WhyPayaana() {
             <div key={index} className="group relative flex">
               <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 w-full flex flex-col">
                 {/* Icon/Image Container */}
-                <div className="relative w-40 h-36 mx-auto mb-6 flex items-center justify-center flex-shrink-0 bg-transparent">
+                <div className="relative w-56 h-52 mx-auto mb-6 flex items-center justify-center flex-shrink-0 bg-transparent">
                   {feature.image ? (
                     <div className="relative w-full h-full bg-transparent">
                       <Image
@@ -56,7 +56,7 @@ export default function WhyPayaana() {
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-2xl flex items-center justify-center shadow-lg">
                       <svg
-                        className="w-12 h-12 text-white"
+                        className="w-16 h-16 text-white"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"

@@ -56,6 +56,21 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Specialised Destination', value: 'specialised' },
+          { title: 'International Holiday Packages', value: 'international' },
+          { title: 'Domestic Holiday Packages', value: 'domestic' },
+          { title: 'Fixed Departures', value: 'fixedDeparture' },
+        ],
+        layout: 'radio',
+      },
+      description: 'Category for organizing packages on the packages page',
+    }),
+    defineField({
       name: 'highlights',
       title: 'Highlights',
       type: 'array',
