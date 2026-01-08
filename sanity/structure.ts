@@ -8,6 +8,7 @@ import {
   HomeIcon,
   CalendarIcon,
   SparklesIcon,
+  ImageIcon,
 } from "@sanity/icons";
 
 // https://www.sanity.io/docs/structure-builder-cheat-sheet
@@ -118,6 +119,74 @@ export const structure: StructureResolver = (S) =>
                   S.documentList()
                     .title("Specialised Destination")
                     .filter('_type == "packages" && category == "specialised"')
+                    .defaultOrdering([
+                      { field: "displayOrder", direction: "asc" },
+                    ])
+                ),
+            ])
+        ),
+
+      S.divider(),
+
+      // Gallery - Organized by categories
+      S.listItem()
+        .title("Gallery")
+        .icon(ImageIcon)
+        .child(
+          S.list()
+            .title("Gallery")
+            .items([
+              // All Gallery Images - This one will have the create button
+              S.listItem()
+                .title("All Gallery Images")
+                .icon(ImageIcon)
+                .child(
+                  S.documentTypeList("gallery")
+                    .title("All Gallery Images")
+                    .defaultOrdering([
+                      { field: "displayOrder", direction: "asc" },
+                    ])
+                ),
+              // Adventure Category - Has create button
+              S.listItem()
+                .title("Adventure")
+                .icon(SparklesIcon)
+                .child(
+                  S.documentTypeList("gallery")
+                    .title("Adventure Images")
+                    .defaultOrdering([
+                      { field: "displayOrder", direction: "asc" },
+                    ])
+                ),
+              // Nature Category - Has create button
+              S.listItem()
+                .title("Nature")
+                .icon(SparklesIcon)
+                .child(
+                  S.documentTypeList("gallery")
+                    .title("Nature Images")
+                    .defaultOrdering([
+                      { field: "displayOrder", direction: "asc" },
+                    ])
+                ),
+              // Culture Category - Has create button
+              S.listItem()
+                .title("Culture")
+                .icon(EarthGlobeIcon)
+                .child(
+                  S.documentTypeList("gallery")
+                    .title("Culture Images")
+                    .defaultOrdering([
+                      { field: "displayOrder", direction: "asc" },
+                    ])
+                ),
+              // Happy Customers Category - Has create button
+              S.listItem()
+                .title("Happy Customers")
+                .icon(SparklesIcon)
+                .child(
+                  S.documentTypeList("gallery")
+                    .title("Happy Customers Images")
                     .defaultOrdering([
                       { field: "displayOrder", direction: "asc" },
                     ])

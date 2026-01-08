@@ -289,3 +289,48 @@ export async function getServiceBySlug(slug: string) {
     return null;
   }
 }
+
+export async function getGalleryImages(category?: string) {
+  try {
+    const filter = category
+      ? `category == "${category}" && !(_id in path("drafts.**"))`
+      : `!(_id in path("drafts.**"))`;
+
+    const images = await client.fetch(`
+      *[_type == "gallery" && ${filter}] | order(displayOrder asc, _createdAt desc) {
+        _id,
+        title,
+        image,
+        category,
+        alt,
+        displayOrder
+      }
+    `);
+    return images || [];
+  } catch (error) {
+    console.error("Error fetching gallery images:", error);
+    return [];
+  }
+}
+
+export async function getGalleryImagesByCategory(category: string) {
+  try {
+    const images = await client.fetch(
+      `
+      *[_type == "gallery" && category == $category && !(_id in path("drafts.**"))] | order(displayOrder asc, _createdAt desc) {
+        _id,
+        title,
+        image,
+        category,
+        alt,
+        displayOrder
+      }
+    `,
+      { category }
+    );
+    return images || [];
+  } catch (error) {
+    console.error(`Error fetching gallery images for category ${category}:`, error);
+    return [];
+  }
+}
