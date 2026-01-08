@@ -73,8 +73,11 @@ async function publishDrafts(type: string, typeName: string) {
       // Fetch the full draft document
       const draftDoc = await client.getDocument(draft._id);
 
+      if (!draftDoc) {
+        throw new Error(`Draft document not found for ID: ${draft._id}`);
+      }
       // Remove the _id and _rev from draft, set new _id
-      const { _id, _rev, ...docData } = draftDoc;
+      const { _id, _rev, ...docData } = draftDoc as Record<string, any>;
 
       // Create or replace the published document
       await client.createOrReplace({
