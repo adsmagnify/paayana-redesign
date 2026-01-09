@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <main className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-brand-purple rounded-full blur-3xl"></div>
@@ -22,13 +22,13 @@ export default function ContactPage() {
 
         {/* Content */}
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 md:mb-6 tracking-tight">
             Get in{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-light-pink">
               Touch
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed px-2">
             Have questions? We&apos;d love to hear from you. Send us a message
             and we&apos;ll respond as soon as possible.
           </p>
@@ -52,14 +52,14 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content - Equal Height Columns */}
-      <section className="py-20 bg-white -mt-1">
+      <section className="py-12 md:py-20 bg-white -mt-1">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-gray-900">
                     Let&apos;s Start a Conversation
                   </h2>
                   <p className="text-lg text-gray-600 leading-relaxed">
@@ -196,11 +196,11 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-8 md:mb-12">
               <div className="inline-block mb-4 px-5 py-2 bg-brand-purple/10 border-2 border-brand-purple/30 rounded-full shadow-md">
                 <span className="text-brand-purple font-semibold text-sm uppercase tracking-wider flex items-center gap-2">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -219,8 +219,8 @@ export default function ContactPage() {
             </div>
 
             {/* Map Container */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
-              <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg max-w-xs">
+            <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl border border-gray-200">
+              <div className="hidden sm:block absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg max-w-xs">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-brand-purple rounded-xl flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -238,7 +238,7 @@ export default function ContactPage() {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0074723256473!2d77.5442391!3d12.9074272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fd9db2b3a97%3A0xdae1ceff58f1b7c4!2sPAYAANA!5e0!3m2!1sen!2sin!4v1704825600000!5m2!1sen!2sin"
                 width="100%"
-                height="450"
+                height="350"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"

@@ -41,10 +41,10 @@ export default function WhyPayaana() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 tracking-tight">
             WHY PAYAANA?
           </h2>
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -54,10 +54,10 @@ export default function WhyPayaana() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8">
           {features.map((feature, index) => (
             <div key={index} className="group relative">
-              <div className="relative bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden h-full text-center">
+              <div className="relative bg-white rounded-2xl md:rounded-3xl p-4 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden h-full text-center">
                 {/* Gradient background on hover */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
@@ -68,8 +68,8 @@ export default function WhyPayaana() {
                   {feature.image ? (
                     <div
                       className={`relative mx-auto ${feature.title.includes("School")
-                        ? "w-44 h-44 mb-0"
-                        : "w-44 h-44"
+                        ? "w-24 h-24 sm:w-32 sm:h-32 md:w-44 md:h-44 mb-0"
+                        : "w-24 h-24 sm:w-32 sm:h-32 md:w-44 md:h-44"
                         }`}
                     >
                       <Image
@@ -98,10 +98,10 @@ export default function WhyPayaana() {
                   )}
                 </div>
 
-                <h3 className="text-2xl font-bold text-gray-900 -mt-7 mb-3 group-hover:text-brand-purple transition-colors">
+                <h3 className="text-base sm:text-lg md:text-2xl font-bold text-gray-900 -mt-4 md:-mt-7 mb-2 md:mb-3 group-hover:text-brand-purple transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed hidden sm:block">
                   {feature.description}
                 </p>
               </div>

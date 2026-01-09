@@ -43,7 +43,7 @@ export default function Hero() {
         <div className="container mx-auto px-4 py-20">
           <div className="max-w-5xl mx-auto text-center">
             {/* Main Headline */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 md:mb-6 tracking-tight">
               Explore the{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-light-pink">
                 World
@@ -53,7 +53,7 @@ export default function Hero() {
             </h1>
 
             {/* Sub-headline */}
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-12">
+            <p className="text-lg md:text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8 md:mb-12 px-2">
               Your trusted partner since 2012 for personalized and hassle-free
               travel experiences, tailored to meet your unique preferences and
               needs.
@@ -69,19 +69,19 @@ export default function Hero() {
                 Search Packages & Destinations
               </h2>
 
-              <form onSubmit={handleSearch} className="flex gap-4">
+              <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <div className="flex-1">
                   <input
                     type="text"
                     placeholder="Search by destination, package name, or location..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-brand-purple text-lg"
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-purple focus:border-brand-purple text-base sm:text-lg"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="bg-brand-purple hover:bg-brand-purple-dark text-white px-8 py-4 rounded-xl font-semibold flex items-center space-x-2 transition-colors shadow-lg hover:shadow-xl"
+                  className="bg-brand-purple hover:bg-brand-purple-dark text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 transition-colors shadow-lg hover:shadow-xl"
                 >
                   <svg
                     className="w-6 h-6"

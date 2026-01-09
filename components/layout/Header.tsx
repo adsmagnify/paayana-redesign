@@ -73,8 +73,8 @@ export default function Header() {
             <Navigation mobile />
             <div className="pt-4">
               <Link href="/packages">
-                <button className="bg-brand-purple hover:bg-brand-purple/90 text-white px-6 py-2 rounded-full font-semibold transition-colors w-full">
-                  Get Started
+                <button className="bg-brand-purple hover:bg-brand-purple/90 text-white px-6 py-3 rounded-full font-semibold transition-colors w-full">
+                  Book Now
                 </button>
               </Link>
             </div>

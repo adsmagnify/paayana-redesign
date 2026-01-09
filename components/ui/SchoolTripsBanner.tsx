@@ -9,7 +9,7 @@ export default function SchoolTripsBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed left-6 bottom-6 z-50 animate-fade-in-up">
+    <div className="fixed left-3 bottom-3 sm:left-6 sm:bottom-6 z-50 animate-fade-in-up">
       <div className="relative group">
         <button
           onClick={(e) => {
@@ -36,13 +36,13 @@ export default function SchoolTripsBanner() {
           href="/services/school-college-trips"
           className="block"
         >
-          <div className="bg-gradient-to-r from-brand-purple to-brand-purple-dark text-white pl-4 pr-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 hover:scale-105 flex items-center gap-3 animate-pulse-glow border border-white/20 backdrop-blur-sm">
-            <span className="text-5xl animate-bounce">🎓</span>
+          <div className="bg-gradient-to-r from-brand-purple to-brand-purple-dark text-white pl-3 pr-4 sm:pl-4 sm:pr-6 py-2 sm:py-3 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 hover:scale-105 flex items-center gap-2 sm:gap-3 animate-pulse-glow border border-white/20 backdrop-blur-sm">
+            <span className="text-3xl sm:text-5xl animate-bounce">🎓</span>
             <div>
-              <p className="text-xs font-medium text-white/80 uppercase tracking-wider">
+              <p className="text-[10px] sm:text-xs font-medium text-white/80 uppercase tracking-wider">
                 New
               </p>
-              <p className="font-bold text-sm whitespace-nowrap">
+              <p className="font-bold text-xs sm:text-sm whitespace-nowrap">
                 School & College Trips
               </p>
             </div>

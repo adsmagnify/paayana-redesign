@@ -45,9 +45,9 @@ export default async function Footer() {
 
       {/* Content */}
       <div className="relative z-10">
-        <div className="container mx-auto px-4 py-20">
+        <div className="container mx-auto px-4 py-12 md:py-20">
           {/* Main Footer Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-20 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-20 mb-12 md:mb-16">
             {/* Logo & About Section */}
             <div>
               <Link href="/" className="inline-block mb-6">
@@ -248,7 +248,7 @@ export default async function Footer() {
                   href="https://adsmagnify.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 hover:text-payaana-pink transition-colors underline"
+                  className="text- hover:text-payaana-pink transition-colors underline"
                 >
                   adsmagnify.com
                 </a>

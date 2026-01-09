@@ -76,26 +76,26 @@ export default function AboutPage() {
 
         {/* Content - No animations */}
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 md:mb-6 tracking-tight">
             About{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-light-pink">
               Payaana
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-lg md:text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-6 md:mb-8 px-2">
             Your trusted partner for pocket-friendly travel experiences
             worldwide. Based in Bangalore, serving travelers across the globe.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Link
               href="/packages"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-brand-purple text-white font-semibold rounded-full hover:bg-brand-purple-dark transition-all duration-300 hover:shadow-lg hover:shadow-brand-purple/30"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-brand-purple text-white font-semibold rounded-full hover:bg-brand-purple-dark transition-all duration-300 hover:shadow-lg hover:shadow-brand-purple/30 text-sm sm:text-base"
             >
               Explore Packages
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border border-white/30 hover:bg-white/20 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border border-white/30 hover:bg-white/20 transition-all duration-300 text-sm sm:text-base"
             >
               Contact Us
             </Link>
@@ -104,7 +104,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-24 bg-white relative">
+      <section className="py-16 md:py-24 bg-white relative">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-gray-50 to-transparent" />
 
         <div className="container mx-auto px-4 relative">
