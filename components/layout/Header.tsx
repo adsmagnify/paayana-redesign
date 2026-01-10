@@ -44,9 +44,9 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button - right aligned */}
           <button
-            className="lg:hidden p-2 text-white bg-white/20 backdrop-blur-sm rounded-full"
+            className="lg:hidden absolute right-0 p-2 text-white bg-white/20 backdrop-blur-sm rounded-full"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >

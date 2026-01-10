@@ -139,3 +139,95 @@ SANITY_API_TOKEN=your-token npm run publish-destinations-fix
 ```
 
 This will fix the 27 failed destinations by updating package references first.
+
+---
+
+## upload-images-to-sanity.ts
+
+Uploads images from the `public` folder to Sanity and automatically matches them with destinations and packages.
+
+### Prerequisites
+
+1. You need a Sanity API token with **Editor** permissions (same as above)
+2. Install `tsx` if not already installed:
+   ```bash
+   npm install -D tsx
+   ```
+
+### What It Does
+
+1. **Uploads Gallery Images**: Finds all images matching the pattern `imgi_XX_YY.webp` (where YY is just numbers, no place name) and uploads them to Sanity as gallery documents
+2. **Matches Destination Images**: Matches destination images based on file names (e.g., `Kerala.webp` → destination "Kerala")
+3. **Matches Package Images**: Matches package images based on their associated destination names
+
+### Usage
+
+#### Option 1: Using npm script
+
+```bash
+SANITY_API_TOKEN=your-token-here npm run upload-images
+```
+
+#### Option 2: Direct tsx command
+
+```bash
+SANITY_API_TOKEN=your-token-here npx tsx scripts/upload-images-to-sanity.ts
+```
+
+### Image Naming Conventions
+
+- **Gallery Images**: `imgi_XX_YY.webp` where YY is just numbers (e.g., `imgi_32_11.webp`)
+- **Destination/Package Images**: Can be named as:
+  - `PLACENAME.webp` (e.g., `Kerala.webp`)
+  - `imgi_XX_PLACENAME.webp` (e.g., `imgi_16_Kerala.webp`)
+
+The script will automatically match:
+
+- Destination "Kerala" → `Kerala.webp` or `imgi_XX_Kerala.webp`
+- Package with destination "Kerala" → `Kerala.webp` or `imgi_XX_Kerala.webp`
+
+### Example Output
+
+```
+🚀 Starting image upload and matching process...
+Project: q2w6jxdi
+Dataset: production
+
+==================================================
+STEP 1: Uploading Gallery Images
+==================================================
+Found 25 gallery images
+  📤 Uploading: imgi_32_11.webp...
+  ✅ Created gallery document: imgi_32_11.webp
+  ...
+
+Gallery: 25 uploaded, 0 failed
+
+==================================================
+STEP 2: Matching Destination Images
+==================================================
+Found 15 destinations
+  ✅ Updated: Kerala with Kerala.webp
+  ✅ Updated: Dubai with Dubai.webp
+  ...
+
+Destinations: 15 updated, 0 not found
+
+==================================================
+STEP 3: Matching Package Images
+==================================================
+Found 28 packages
+  ✅ Updated: Kerala Backwaters Tour with Kerala.webp
+  ✅ Updated: Dubai Adventure with Dubai.webp
+  ...
+
+Packages: 28 updated, 0 not found
+
+✅ Image upload and matching completed!
+```
+
+### Notes
+
+- The script will skip images that are already uploaded (based on asset reference)
+- Gallery images are created with default category "adventure" - you can change this in Sanity Studio
+- If an image is not found for a destination/package, it will be logged but won't fail the process

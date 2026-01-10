@@ -248,7 +248,7 @@ export default async function Footer() {
                   href="https://adsmagnify.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text- hover:text-payaana-pink transition-colors underline"
+                  className="text-payaana-pink hover:text-blue-500 transition-colors underline"
                 >
                   adsmagnify.com
                 </a>

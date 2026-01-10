@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "publish-drafts": "node scripts/publish-all-drafts.js",
-    "publish-destinations-fix": "node scripts/publish-destinations-fix.js"
+    "publish-destinations-fix": "node scripts/publish-destinations-fix.js",
+    "upload-images": "tsx scripts/upload-images-to-sanity.ts"
   },
   "dependencies": {
     "@sanity/client": "^6.29.1",
@@ -19,6 +20,7 @@
     "next-sanity": "^9.12.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "resend": "^6.7.0",
     "sanity": "^3.99.0",
     "styled-components": "^6.1.19",
     "tailwind-merge": "^2.0.0"
@@ -32,6 +34,7 @@
     "eslint-config-next": "^14.0.0",
     "postcss": "^8.4.0",
     "tailwindcss": "^3.3.0",
+    "tsx": "^4.21.0",
     "typescript": "^5.0.0"
   }
 }
